@@ -1,6 +1,6 @@
-package progamas;
+package testes;
 
-import entidades.Pessoa;
+import pessoa.Pessoa;
 
 public class TestePesoa {
     public static void main(String[] args) {

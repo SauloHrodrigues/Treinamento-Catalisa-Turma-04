@@ -1,4 +1,4 @@
-package entidades;
+package carro;
 
 public class Carro {
     public String qtdePortas;

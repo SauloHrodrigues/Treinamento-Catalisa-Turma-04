@@ -1,4 +1,4 @@
-package entidades;
+package pessoa;
 
 public class Pessoa {
     public String nome;

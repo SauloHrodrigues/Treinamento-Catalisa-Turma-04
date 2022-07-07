@@ -1,4 +1,4 @@
-package entidades;
+package contaCorrente;
 
 public class ContaCorrente {
     public String nomeCorrentista;
