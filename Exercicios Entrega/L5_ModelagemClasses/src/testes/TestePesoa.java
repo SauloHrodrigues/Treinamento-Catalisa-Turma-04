@@ -5,9 +5,9 @@ import pessoa.Pessoa;
 public class TestePesoa {
     public static void main(String[] args) {
         //Pessoa saulo = new Pessoa("saulo",18,2.0f.,78);
-        Pessoa rafael = new Pessoa("rafael",20,1.8f,86);
+       // Pessoa rafael = new Pessoa("rafael",20,1.8f,86);
         //exibirPessoa(saulo);
-        exibirPessoa(rafael);
+        //exibirPessoa(rafael);
     }
 
     private static void exibirPessoa(Pessoa pessoa) {
