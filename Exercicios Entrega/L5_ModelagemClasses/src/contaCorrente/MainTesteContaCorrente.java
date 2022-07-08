@@ -17,7 +17,7 @@ public class MainTesteContaCorrente {
 
         ContaCorrente contaCorrenteSemSaldo = new ContaCorrente(numeroConta,nomeCorrentista);
 
-        System.out.println("Conta corrente vcom saldo:");
+        System.out.println("Conta corrente sem saldo:");
         System.out.println("Conta com Saldo :");
         System.out.println("Número da conta: " + contaCorrenteSemSaldo.numeroConta);
         System.out.println("Nome do correntista: " + contaCorrenteSemSaldo.nomeCorrentista);
