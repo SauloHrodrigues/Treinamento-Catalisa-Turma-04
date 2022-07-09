@@ -16,6 +16,6 @@ public class Caixa {
         this.saldoConta += valorCredito;
     }
     public void debito (double valorDebito){
-         this.saldoConta =- valorDebito;
+         this.saldoConta -= valorDebito;
     }
 }

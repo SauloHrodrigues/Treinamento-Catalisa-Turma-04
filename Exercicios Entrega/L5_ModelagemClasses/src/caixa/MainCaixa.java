@@ -15,35 +15,80 @@ public class MainCaixa {
         while (quantidadeTransacao > 0) {
             System.out.println("Qual operação deseja?");
             System.out.println("1 - Débito.");
-            System.out.println("2 - Cébito.");
+            System.out.println("2 - Crébito.");
             System.out.println("3 - Saldo");
-            int opcao = input.nextInt();
-            if (opcao == 1) {
-                System.out.print("Digite o valor do saque: R$ ");
-                double saque = input.nextDouble();
-                if (saque > caixa.saldoConta) {
-                    System.out.println("Saldo insuficiente!");
+            System.out.println("4 - Sair ");
+            int operacao = input.nextInt();
+            switch (operacao){
+                case 1:
+                    // debito
+                    System.out.println("Digite o valor do saque: ");
+                    double saque = input.nextDouble();
+                    if (saque > caixa.saldoConta){
+                        System.out.println("Saldo insuficiente!");
+                    }else{
+                        caixa.debito(saque);
+                        System.out.println("Retire seu dineiro.  ");
+                        System.out.println("Fezer nova operação s/n ");
+                        String resposta = input.next();
+                        boolean aux = validaResposta(resposta,input);
+                        if (aux) {
+                            quantidadeTransacao += 1;
+                        }else{
+                            quantidadeTransacao = 0;
+                        }
+                      break;
+                    }
+
                     break;
-                } else {
-                    caixa.debito(saque);
-                }
-            } else if (opcao == 2) {
-                System.out.print("Digite o valor do depósito : R$ ");
-                double deposito = input.nextDouble();
-                caixa.credito(deposito);
-            } else if (opcao == 3) {
-                System.out.println("Seu saldo é de R$ " + caixa.getSaldoConta());
-            } else {
-                System.out.println("Opção invalida! Tentar Novamente s/n");
-                String op = input.next();
-                if (op.equalsIgnoreCase("n")) {
+                case 2://credito
+                    System.out.println("Digite o valor do depósito: ");
+                    double credito = input.nextDouble();
+                    caixa.credito(credito);
                     break;
-                } else {
-                    quantidadeTransacao += 1;
-                }
+                case 3:
+                    System.out.println("Seu saldo é de: R$ "+ caixa.getSaldoConta());
+                    break;
+                case 4:
+                    System.out.println("Obrigado pela preferência, volte sempre.");
+                    quantidadeTransacao=0;
+                    break;
+                default:
+                    String resposta = "n";
+                    boolean aux = validaResposta(resposta,input);
+                    if (aux) {
+                        quantidadeTransacao += 1;
+                    }else{
+                        quantidadeTransacao = 0;
+                    }
             }
+            quantidadeTransacao-= 1;
 
-
-            input.close();
         }
     }
+
+    public static boolean validaResposta(String resposta, Scanner input){
+        int cont =0;
+        boolean retorno = true;
+        while (resposta.equalsIgnoreCase("n")&& cont<3) {
+            System.out.println("Opção inválida! Deseja fazer outra operação? s/n");
+            resposta = input.next();
+            if (cont == 3) {
+                System.out.println("Tente mais tarde!");
+                retorno = false;
+                break;
+            }
+            if (resposta.equalsIgnoreCase("s")){
+                retorno = true;
+                break;
+            }
+            if(resposta.equalsIgnoreCase("n")){
+                System.out.println("Obrigado pela preferência, volte sempre!");
+                retorno = false;
+                break;
+            }
+            cont += 1;
+        }
+        return retorno;
+    }
+ }
