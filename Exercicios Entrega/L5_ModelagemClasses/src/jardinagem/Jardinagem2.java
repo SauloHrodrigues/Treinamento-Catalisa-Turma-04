@@ -1,14 +1,14 @@
 package jardinagem;
 
-public class Jardinagem {
+public class Jardinagem2 {
     private String nomeJardim;
     private float qtdMetros;
     private int qtdPlantas;
     private float qtdMetrosGrama;
-    private float kilosAdubo;
-    private double valorAdubo;
+    //private float kilosAdubo;
+    private double valorKiloAdubo;
     private double valorMetroGrama;
-    private double valorConteGrama;
+    private double valorCorteGrama;
 
     public String getNomeJardim() {
         return nomeJardim;
@@ -42,14 +42,14 @@ public class Jardinagem {
         this.qtdMetrosGrama = qtdMetrosGrama;
     }
 
-    public float getKilosAdubo() {
-        return kilosAdubo;
-    }
-
-    public void setKilosAdubo(float kilosAdubo) {
-
-        this.kilosAdubo = kilosAdubo;
-    }
+//    public float getKilosAdubo() {
+//        return kilosAdubo;
+//    }
+//
+//    public void setKilosAdubo(float kilosAdubo) {
+//
+//        this.kilosAdubo = kilosAdubo;
+//    }
 
     public double getValorAdubo() {
 
@@ -76,18 +76,16 @@ public class Jardinagem {
         this.valorConteGrama = valorConteGrama;
     }
 
-    public void usarAdubo(){
+    public float calcularQtdAduboKilos(){
         //(a cada 2 metros de grama usa-se 100 gramas de adubo - calcule quanto de adubo usar)
-        kilosAdubo= (float) (valorAdubo/1000)*(qtdMetros/2);
-        System.out.println("kilos adubos"+kilosAdubo);
+        return (qtdMetrosGrama*50)/1000f;
     }
-    public void precoAdubo(){
-        // resultado do usarAdubo  * valorAdubo)
-        valorAdubo = valorAdubo * kilosAdubo;
-        System.out.println("valor adubo"+valorAdubo);
+    public double calcularPrecoAdubo(){
+        // resultado do usarAdubo  * valorAduboKilo)
+        return (this.calcularQtdAduboKilos()*this.valorKiloAdubo);
     }
     public void precoCorteGrama(){
         //(valorConteGrama = qtdMetrosGrama * valorMetroGrama)
-        valorConteGrama = qtdMetrosGrama * valorMetroGrama;
+        //valorConteGrama = qtdMetrosGrama * valorMetroGrama;
     }
 }
