@@ -19,8 +19,7 @@ public class MainLista06_A {
                             "receberá de Salário R$ "+p.getSalario());
                     aumento(p.getNome(), p.getCpf(), p.getNumeroRegistro(), p.getOrgaoLotacao(), p.getSalario(),
                             p.getNivelGraduacao(), p.getDisciplinaMinistrada(), p.getQtdAlunos(), p.getQtdTurmas(), input);
-//                    System.out.println("O professor "+p.getNome()+" de "+p.getDisciplinaMinistrada()+
-//                            "receberá de Salário R$ "+p.getSalario());
+
                     break;
 
                 case 2:
@@ -58,6 +57,7 @@ public class MainLista06_A {
 
         if(aumento.equalsIgnoreCase("s")){
             prof.aumentoSalario();
+            System.out.printf("O novo salário será R$ %.2f \n\n", prof.getSalarioProf());
         }
     }
 

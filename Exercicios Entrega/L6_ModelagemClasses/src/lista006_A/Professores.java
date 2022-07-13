@@ -7,9 +7,12 @@ public class Professores extends Funcionarios{
     private String disciplinaMinistrada;
     private int qtdAlunos;
     private int qtdTurmas;
+    private double salarioProf;
 
-    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario,
+                       String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
+        this.salarioProf = salario;
     }
 
     public Professores(Scanner input){
@@ -26,10 +29,7 @@ public class Professores extends Funcionarios{
 
     @Override
     public void aumentoSalario() {
-        System.out.println("O salario é =="+getSalario());
-        double novoSalario = getSalario()+ getSalario()*0.10;
-        setSalario(novoSalario);
-        System.out.println("Onovo Salario é "+novoSalario);
+       this.salarioProf += getSalario()*0.10;
 
     }
 
@@ -67,5 +67,13 @@ public class Professores extends Funcionarios{
 
     public void setQtdTurmas(int qtdTurmas) {
         this.qtdTurmas = qtdTurmas;
+    }
+
+    public double getSalarioProf() {
+        return salarioProf;
+    }
+
+    public void setSalarioProf(double salarioProf) {
+        this.salarioProf = salarioProf;
     }
 }
