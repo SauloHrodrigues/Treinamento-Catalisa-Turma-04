@@ -54,9 +54,9 @@ public class Pais {
 
     public void vizinhanca(Pais pais){
         if(this.paisesFronteiras.contains(pais)){
-            System.out.println(pais.getNomePais() + " é vizinho.");
+            System.out.println(pais.getNomePais() + " é vizinho de "+pais);
         }else {
-            System.out.println(pais.getNomePais() + " não é vizinho");
+            System.out.println(pais.getNomePais() + " não é vizinho de "+ pais.getNomePais());
         }
 
     }

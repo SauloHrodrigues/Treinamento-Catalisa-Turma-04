@@ -1,38 +1,38 @@
 package Exercicio07_A;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Continente {
-    private String nomeContinentes;
+    private String nomeContinente;
     private double dimensaoContinente;
     private double populacaoContinente;
     private double densidadePopulacional;
 
-    public Continente(String nomeContinentes, double dimensaoContinente, double populacaoContinente, double densidadePopulacional) {
-        this.nomeContinentes = nomeContinentes;
+    public Continente(String nomeContinente, double dimensaoContinente, double populacaoContinente, double densidadePopulacional) {
+        this.nomeContinente = nomeContinente;
         this.dimensaoContinente = dimensaoContinente;
         this.populacaoContinente = populacaoContinente;
         this.densidadePopulacional = densidadePopulacional;
     }
 
-    public Continente(String nomeContinentes){
-        this.nomeContinentes = "America Latina";
-    }
-    List<String> paises = new ArrayList();
-    public void adcionarPaises(String paises){
+    List<Paises> paises = new ArrayList();
 
-    }
-    public void retornaDimensaoContinente(){
-        System.out.println("A Dimensão do continente é de: "+ dimensaoContinente);
+    //Adicionar paises
+    public void adicionaPaises(Paises paises) {
+        this.paises.add(paises);
     }
 
-    public String getNomeContinentes() {
-        return nomeContinentes;
+    public void retornaDimensaoContinente() {
+        System.out.println("A dimensão do nosso continente é de: " + dimensaoContinente);
     }
 
-    public void setNomeContinentes(String nomeContinentes) {
-        this.nomeContinentes = nomeContinentes;
+
+    public String getNomeContinente() {
+        return nomeContinente;
+    }
+
+    public void setNomeContinente(String nomeContinente) {
+        this.nomeContinente = nomeContinente;
     }
 
     public double getDimensaoContinente() {
@@ -58,4 +58,25 @@ public class Continente {
     public void setDensidadePopulacional(double densidadePopulacional) {
         this.densidadePopulacional = densidadePopulacional;
     }
+
+    public List<Paises> getPaises() {
+        return paises;
+    }
+
+    public void setPaises(List<Paises> paises) {
+        this.paises = paises;
+    }
+
+    @Override
+    public String toString() {
+        return "Continente{" +
+                "nomeContinente='" + nomeContinente + '\'' +
+                ", dimensaoContinente=" + dimensaoContinente +
+                ", populacaoContinente=" + populacaoContinente +
+                ", densidadePopulacional=" + densidadePopulacional +
+                ", paises=" + paises +
+                '}';
+    }
+
+    ackage continente;
 }

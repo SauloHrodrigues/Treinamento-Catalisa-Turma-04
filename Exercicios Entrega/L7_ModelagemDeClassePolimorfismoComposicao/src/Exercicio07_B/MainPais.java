@@ -28,34 +28,34 @@ public class MainPais {
         System.out.println();
 
 
-        System.out.println("ARGENTINA **********************");
-        System.out.println("Código ISO: " + argentina.getCodigoISO());
-        System.out.println("Nome: " + argentina.getNomePais());
-        System.out.println("Dimenssão do pais: " + argentina.getDimensaoPais());
-        System.out.println("Densidade populacional: " + argentina.calcularDensidadePopulacional());
-        argentina.vizinhanca(brasil);
-        argentina.vizinhanca(chile);
-        argentina.vizinhanca(paraguai);
-        System.out.println();
-
-        System.out.println("CHILE **********************");
-        System.out.println("Código ISO: " + chile.getCodigoISO());
-        System.out.println("Nome: " + chile.getNomePais());
-        System.out.println("Dimenssão do pais: " + chile.getDimensaoPais());
-        System.out.println("Densidade populacional: " + chile.calcularDensidadePopulacional());
-        chile.vizinhanca(brasil);
-        chile.vizinhanca(argentina);
-        chile.vizinhanca(paraguai);
-        System.out.println();
-
-        System.out.println("PARAGUAI **********************");
-        System.out.println("Código ISO: " + paraguai.getCodigoISO());
-        System.out.println("Nome: " + paraguai.getNomePais());
-        System.out.println("Dimenssão do pais: " + paraguai.getDimensaoPais());
-        System.out.println("Densidade populacional: " + paraguai.calcularDensidadePopulacional());
-        paraguai.vizinhanca(brasil);
-        paraguai.vizinhanca(argentina);
-        paraguai.vizinhanca(chile);
-        System.out.println();
+//        System.out.println("ARGENTINA **********************");
+//        System.out.println("Código ISO: " + argentina.getCodigoISO());
+//        System.out.println("Nome: " + argentina.getNomePais());
+//        System.out.println("Dimenssão do pais: " + argentina.getDimensaoPais());
+//        System.out.println("Densidade populacional: " + argentina.calcularDensidadePopulacional());
+//        argentina.vizinhanca(brasil);
+//        argentina.vizinhanca(chile);
+//        argentina.vizinhanca(paraguai);
+//        System.out.println();
+//
+//        System.out.println("CHILE **********************");
+//        System.out.println("Código ISO: " + chile.getCodigoISO());
+//        System.out.println("Nome: " + chile.getNomePais());
+//        System.out.println("Dimenssão do pais: " + chile.getDimensaoPais());
+//        System.out.println("Densidade populacional: " + chile.calcularDensidadePopulacional());
+//        chile.vizinhanca(brasil);
+//        chile.vizinhanca(argentina);
+//        chile.vizinhanca(paraguai);
+//        System.out.println();
+//
+//        System.out.println("PARAGUAI **********************");
+//        System.out.println("Código ISO: " + paraguai.getCodigoISO());
+//        System.out.println("Nome: " + paraguai.getNomePais());
+//        System.out.println("Dimenssão do pais: " + paraguai.getDimensaoPais());
+//        System.out.println("Densidade populacional: " + paraguai.calcularDensidadePopulacional());
+//        paraguai.vizinhanca(brasil);
+//        paraguai.vizinhanca(argentina);
+//        paraguai.vizinhanca(chile);
+//        System.out.println();
     }
 }
