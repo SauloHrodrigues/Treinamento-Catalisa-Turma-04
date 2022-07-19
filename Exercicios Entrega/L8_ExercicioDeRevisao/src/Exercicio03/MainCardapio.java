@@ -1,10 +1,8 @@
 package Exercicio03;
 
-import Exercicio02.Candidato;
-
 import java.util.Scanner;
 
-public class MinCardapio {
+public class MainCardapio {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
